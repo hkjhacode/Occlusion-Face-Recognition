@@ -1,0 +1,6 @@
+venv/
+train/
+efficientnetB1_model*
+
+__pycache__/
+*.pyc
