@@ -1,8 +1,15 @@
 # Real-Life Face Occlusion Using Deep Learning & Computer Vision
 
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![PyTorch](https://img.shields.io/badge/PyTorch-1.14-red)
+![OpenCV](https://img.shields.io/badge/OpenCV-4.7.0-green)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
+---
+
 ## Overview
 
-**Real-Life Face Occlusion Using DL & CV** is a major project focused on detecting and handling **occlusions in human faces**, such as masks, hats, or glasses. The system leverages **Deep Learning** and **Computer Vision** techniques to improve face recognition performance in real-world scenarios where occlusions are common.
+**Real-Life Face Occlusion Using DL & CV** is a major project focused on detecting occlusions in human faces such as **masks, hats, and glasses**. The project leverages **Deep Learning** and **Computer Vision** to improve face recognition in real-world scenarios.
 
 ---
 
@@ -10,8 +17,8 @@
 
 * Detect faces from images or videos in real-time.
 * Identify and classify occlusions: masks, hats, glasses, etc.
-* Handle multiple faces simultaneously.
-* Improve downstream face recognition and analysis tasks under occlusion conditions.
+* Handle multiple faces in a single frame.
+* Improve downstream face recognition under occlusions.
 
 ---
 
@@ -22,10 +29,10 @@ Real-Life-Face-Occlusion-Using-DL-CV/
 │
 ├── data/                  # Dataset with faces and occlusion images
 ├── models/                # Trained deep learning models
-├── notebooks/             # Jupyter notebooks for training and experimentation
+├── notebooks/             # Jupyter notebooks for experimentation & training
 ├── scripts/               # Python scripts for training and inference
 ├── app.py                 # Real-time Face Occlusion Detection App
-├── face-occlusiontrain.ipynb  # Final model training notebook
+├── face-occlusiontrain.ipynb  # Model training notebook
 ├── requirements.txt       # Python dependencies
 └── README.md              # Project documentation
 ```
@@ -34,10 +41,10 @@ Real-Life-Face-Occlusion-Using-DL-CV/
 
 ## Dataset
 
-* Based on **CelebHQ** and custom datasets.
-* Includes synthetic occlusions like masks, glasses, and hats.
-* Images resized to **218x178** pixels for model training.
-* Annotated with occlusion types and positions.
+* Original: CelebHQ & custom datasets.
+* Synthetic occlusions added: masks, hats, glasses.
+* Image resolution: **218x178** pixels.
+* Annotated with occlusion type and location.
 
 ---
 
@@ -76,19 +83,21 @@ pip install -r requirements.txt
 python scripts/train.py --data_path ./data --model_path ./models
 ```
 
+* Set hyperparameters like learning rate, batch size, and epochs inside the script.
+
 ### Inference / Testing
 
 ```bash
 python app.py --image_path ./data/test_image.jpg --model_path ./models/face_occlusion_model.pth
 ```
 
-* Detects faces and highlights occluded regions.
+* Detects faces and highlights occluded regions in images or real-time video.
 
 ---
 
 ## Applications
 
-* Face recognition systems in public spaces (mask compliance).
+* Face recognition in public spaces (mask compliance).
 * Security and surveillance.
 * AR/VR filters for virtual masks or glasses.
 * Healthcare monitoring.
@@ -97,15 +106,24 @@ python app.py --image_path ./data/test_image.jpg --model_path ./models/face_occl
 
 ## Future Enhancements
 
-* Real-time video stream support.
+* Real-time high FPS video stream support.
 * Additional occlusion types (scarves, hands, objects).
 * Web or mobile deployment.
-* Integration with face recognition pipelines.
+* Integration with advanced face recognition pipelines.
 
 ---
 
-## Authors
+## References
 
-**Harsh Kumar Jha** and **Ashish Kumar**
+* [CelebHQ Dataset](https://github.com/some-dataset-link)
+* [OpenCV](https://opencv.org/)
+* [PyTorch](https://pytorch.org/)
+
+---
+
+## Author
+
+**Harsh Kumar Jha**
+Final Year B.Tech | Data Science & Computer Vision Enthusiast
 
 ---
